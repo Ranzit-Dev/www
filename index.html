@@ -26,34 +26,30 @@
 <!-- Header -->
 <header>
     <div class="header-content">
-        <h1>Welcome To Our Studio!</h1>
-        <p>It's Nice To Meet You</p>
+        <h1>Hey adventure's !</h1>
+        <p> Nice To Meet You</p>
         <a href="#services" class="btn btn-primary">Tell Me More</a>
     </div>
 </header>
 
-<!-- Services Section -->
+<!-- Services Section -->   
+ <h3 class="h3h3h3">Gallery</h3>
 <div id="services" class="container-fluid">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 service-item">
-          <h3>Service 1</h3>
-          <p>Description of Service 1.</p>
-        </div>
+   <!-- <div class="container">
         <div class="col-md-4 service-item">
           <h3>Service 2</h3>
           <p>Description of Service 2.</p>
         </div>
         <div class="col-md-4 service-item">
           <h3>Service 3</h3>
-          <p>Description of Service 3.</p>
+          <p>Description of Service 3.</p> -->
+          <h1 class="thakendra"> The Adventures place's </h1>
         </div>
       </div>
     </div>
   </div>
   
-  <!-- Portfolio Section -->
+ Portfolio Section 
   <<div class="dddv">
     <!DOCTYPE html>
     <html lang="en">
@@ -78,11 +74,11 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c91f906b-5881-47b1-89e4-e4a69c1961a7" />
+                        <img src="src/Untitled-1.jpg" />
                         <p>Lucas</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5bc859f0-db4f-4ab4-8f5f-e55977c33eb1" />
+                        <img src="src/wallpaperflare.com_wallpaper (6).jpg" />
                         <p>Mike</p>
                     </div>
                     <div class="swiper-slide">
@@ -407,28 +403,65 @@
 
 <!-- Contact Section -->
 <section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p class="section-subheading">Lorem ipsum dolor sit amet consectetur.</p>
-        <form id="contactForm" novalidate>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name *" id="name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email *" id="email" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required>
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" placeholder="Your Message *" id="message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+  <bodyy>
+    
+      <div class="contact-container">
+          <h1>Contact Us</h1>
+          <form class="contact-form">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-button">Send</button>
+          </form>
+          <button class="mail-button" id="mailButton">Email Us</button>
+      </div>
+      <script>
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent!');
+    // You can also add AJAX code here to send the form data to the server without reloading the page.
+});
+
+document.getElementById('mailButton').addEventListener('click', function() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    const subject = encodeURIComponent('Contact Us Form Submission');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    
+    window.location.href = `mailto:thakendra2007@gmail.com.com?subject=${subject}&body=${body}`;
+});
+
+      </script>
+
     </div>
+  
+</bodyy>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="scritp.js"></script>
+<script>
+
+
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent!');
+    // You can also add AJAX code here to send the form data to the server without reloading the page.
+});
+
+  
+</script>
 </body>
 </html>
