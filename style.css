@@ -1,0 +1,263 @@
+
+/* Add styles for animations */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  /* Color enhancements */
+  #services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  #portfolio {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+  
+  #services h2, #portfolio h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .service-item, .portfolio-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover, .portfolio-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-item h3, .portfolio-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #f37478 0%, #eb68b9 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background : transparent;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 120%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.navbar a:hover {
+    color: #008cff;
+}
+
+header {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #f06595 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?abstract') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease-in-out 0.5s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: fadeInUp 2s ease-in-out 1s;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section-subheading {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.services-grid, .portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item, .portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover, .portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item i, .portfolio-item img {
+    margin-bottom: 15px;
+    color: #ff6347;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-caption {
+    padding: 15px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ff6347;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff4500;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
