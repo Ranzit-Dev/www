@@ -271,7 +271,7 @@ header::before {
 }
 
 
-bodyy  {
+bodyy{
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #f06, #f79);
     display: flex;
@@ -359,4 +359,3 @@ bodyy  {
         transform: translateY(0);
     }
 }
-
