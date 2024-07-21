@@ -407,12 +407,12 @@
     </div>
   
 
-<!-- Contact Section -->
+<!-- Contact Section  -->
 <section id="contact">
   <bodyy>
     
-      <div class="contact-container">
-          <h1>Contact Us</h1>
+     <!--  <div class="contact-container">
+         <h1>Contact Us</h1>
           <form class="contact-form">
               <div class="form-group">
                   <label for="name">Name:</label>
@@ -428,9 +428,14 @@
               </div>
               <button type="submit" class="submit-button">Send</button>
           </form>
-          <button class="mail-button" id="mailButton">Email Us</button>
+          <button class="mail-button" id="mailButton">Email Us</button>  -->
       </div>
-      <script>
+
+
+
+
+      
+ <!--    <script>
 
 document.querySelector('.contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -449,7 +454,7 @@ document.getElementById('mailButton').addEventListener('click', function() {
     window.location.href = `mailto:thakendra2007@gmail.com.com?subject=${subject}&body=${body}`;
 });
 
-      </script>
+      </script>   
 
     </div>
   
@@ -466,8 +471,69 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
     alert('Your message has been sent!');
     // You can also add AJAX code here to send the form data to the server without reloading the page.
 });
-
+-->
   
+<bodyx>
+  <div class="services-listt">
+      <div class="service-item">
+          <h3>Web Development</h3>
+          <p>Building responsive and dynamic websites.</p>
+      </div>
+      <div class="service-item">
+          <h3>Graphic Design</h3>
+          <p>Creating visual content to communicate messages.</p>
+      </div>
+
+
+  </div>
+  <button id="load-more">Load More</button>
+  <a href="more.html"> <button id="load-more">More</button> </a>
+<script>
+
+document.getElementById('load-more').addEventListener('click', function() {
+    const button = this;
+    const servicesList = document.querySelector('.services-listt');
+
+    if (button.textContent === 'Show Big & all') {
+        // Simulating loading additional content
+        const newServices = [
+            { title: 'SEO Optimization', description: 'Improving the quality and quantity of website traffic.' },
+            { title: 'Digital Marketing', description: 'Promoting products or brands via digital channels.' } ,
+            { title: 'Web bulding ' , description: 'Hello man In the middle attracy'} ,
+            {title: 'see more', description: 'click "More" For See more' }
+        ];
+
+        newServices.forEach(service => {
+            const serviceItem = document.createElement('div');
+            serviceItem.classList.add('service-item');
+
+            const serviceTitle = document.createElement('h3');
+            serviceTitle.textContent = service.title;
+            serviceItem.appendChild(serviceTitle);
+
+            const serviceDescription = document.createElement('p');
+            serviceDescription.textContent = service.description;
+            serviceItem.appendChild(serviceDescription);
+
+            servicesList.appendChild(serviceItem);
+        });
+
+        button.textContent = 'Show Less';
+    } else {
+        // Removing the additional content
+        const initialItems = Array.from(servicesList.children).slice(0, 2);
+        servicesList.innerHTML = '';
+        initialItems.forEach(item => servicesList.appendChild(item));
+
+        button.textContent = 'Show Big & all';
+    }
+});
+
 </script>
+
+</bodyx>
+
+
+</script>  
 </body>
 </html>
